@@ -1,0 +1,9 @@
+﻿    DB SCAFFOLDING STRING CLI
+dotnet ef dbcontext scaffold "Host=localhost;Database=SouvenirStore;Username=postgres;Password=postgres" Npgsql.EntityFrameworkCore.PostgreSQL --context-dir Data --output-dir Models
+    DB SCAFFOLDING OVERWRITEING STRING CLI
+dotnet ef dbcontext scaffold -f "Host=localhost;Database=SouvenirStore;Username=postgres;Password=postgres" Npgsql.EntityFrameworkCore.PostgreSQL --context-dir Data --output-dir Models
+
+    NuGet packages:
+Microsoft EFCore
+Microsoft EFCore.Design
+Npgsql.EFCore.PostgreSQL
