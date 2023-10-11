@@ -77,11 +77,4 @@ public class OrderController : ControllerBase
 
         return NoContent();
     }
-    
-    //dummy endpoint to test the DB connection
-    [HttpGet("test")]
-    public async Task<ActionResult<IEnumerable<Order>>> Test()
-    {
-        return await _context.Orders.ToListAsync();
-    }
 }

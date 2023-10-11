@@ -77,11 +77,4 @@ public class PriceController : ControllerBase
 
         return NoContent();
     }
-    
-    //dummy endpoint to test the DB connection
-    [HttpGet("test")]
-    public async Task<ActionResult<IEnumerable<Price>>> Test()
-    {
-        return await _context.Prices.ToListAsync();
-    }
 }

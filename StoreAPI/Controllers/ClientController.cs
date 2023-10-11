@@ -80,8 +80,8 @@ public class ClientController : ControllerBase
     
     //dummy endpoint to test the DB connection
     [HttpGet("test")]
-    public async Task<ActionResult<IEnumerable<Client>>> Test()
+    public async Task<ActionResult<IEnumerable<Price>>> Test()
     {
-        return await _context.Clients.ToListAsync();
+        return await _context.Prices.ToListAsync();
     }
 }

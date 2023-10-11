@@ -77,11 +77,4 @@ public class EmployeeTypeController : ControllerBase
 
         return NoContent();
     }
-    
-    //dummy endpoint to test the DB connection
-    [HttpGet("test")]
-    public async Task<ActionResult<IEnumerable<EmployeeType>>> Test()
-    {
-        return await _context.EmployeeTypes.ToListAsync();
-    }
 }

@@ -77,11 +77,4 @@ public class ItemController : ControllerBase
 
         return NoContent();
     }
-    
-    //dummy endpoint to test the DB connection
-    [HttpGet("test")]
-    public async Task<ActionResult<IEnumerable<Item>>> Test()
-    {
-        return await _context.Items.ToListAsync();
-    }
 }
