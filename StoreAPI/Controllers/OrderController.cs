@@ -16,14 +16,14 @@ public class OrderController : ControllerBase
         _context = context;
     }
     
-    //GET api/Orders
+    //GET api/Order
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Order>>> GetOrder()
     {
         return await _context.Orders.ToListAsync();
     }
     
-    //GET api/Orders/id
+    //GET api/Order/id
     [HttpGet("{id}")]
     public async Task<ActionResult<Order>> GetOrder(Guid id)
     {
@@ -36,7 +36,7 @@ public class OrderController : ControllerBase
         return order;
     }
     
-    //POST api/Orders
+    //POST api/Order
     [HttpPost]
     public async Task<ActionResult<Order>> PostOrder(Order order)
     {
@@ -46,7 +46,7 @@ public class OrderController : ControllerBase
         return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId}, order);
     }
     
-    //PUT api/Orders/id
+    //PUT api/Order/id
     [HttpPut("{id}")]
     public async Task<IActionResult> PutOrder(Guid id, Order order)
     {
@@ -61,7 +61,7 @@ public class OrderController : ControllerBase
         return NoContent();
     }
     
-    //DELETE api/Orders/id
+    //DELETE api/Order/id
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteOrder(Guid id)
     {

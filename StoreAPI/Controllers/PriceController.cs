@@ -16,14 +16,14 @@ public class PriceController : ControllerBase
         _context = context;
     }
     
-    //GET api/Prices
+    //GET api/Price
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Price>>> GetPrices()
     {
         return await _context.Prices.ToListAsync();
     }
     
-    //GET api/Prices/id
+    //GET api/Price/id
     [HttpGet("{id}")]
     public async Task<ActionResult<Price>> GetPrices(Guid id)
     {
@@ -36,7 +36,7 @@ public class PriceController : ControllerBase
         return item;
     }
     
-    //POST api/Prices
+    //POST api/Price
     [HttpPost]
     public async Task<ActionResult<Order>> PostPrice(Price item)
     {
@@ -46,7 +46,7 @@ public class PriceController : ControllerBase
         return CreatedAtAction(nameof(GetPrices), new { id = item.PriceId}, item);
     }
     
-    //PUT api/Prices/id
+    //PUT api/Price/id
     [HttpPut("{id}")]
     public async Task<IActionResult> PutOrderItem(Guid id, Price item)
     {
@@ -61,7 +61,7 @@ public class PriceController : ControllerBase
         return NoContent();
     }
     
-    //DELETE api/Prices/id
+    //DELETE api/Price/id
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePrice(Guid id)
     {

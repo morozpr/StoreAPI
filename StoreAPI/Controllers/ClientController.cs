@@ -16,7 +16,7 @@ public class ClientController : ControllerBase
         _context = context;
     }
     
-    //GET api/Clinet
+    //GET api/Client
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Client>>> GetUsers()
     {
@@ -36,7 +36,7 @@ public class ClientController : ControllerBase
         return user;
     }
     
-    //POST api/Clitent
+    //POST api/Client
     [HttpPost]
     public async Task<ActionResult<Employee>> PostUser(Client user)
     {
@@ -61,7 +61,7 @@ public class ClientController : ControllerBase
         return NoContent();
     }
     
-    //DELETE api/Employee/id
+    //DELETE api/Client/id
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUser(Guid id)
     {
